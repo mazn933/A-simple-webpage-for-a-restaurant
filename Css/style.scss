@@ -1,0 +1,1371 @@
+
+@mixin centering-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+};
+
+@mixin centering-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+};
+
+@import 'Colors';
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family:helvetica,sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+/**Styling the header**/
+
+.logo{
+    width: 170px;
+    object-fit: cover;
+    margin-left: 4em;
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    background-color: $lighgrey;
+    color: $grey;
+    border-bottom: 3px solid $golden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;    
+
+    nav{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 15vh;
+    
+    }
+    
+}
+
+
+
+
+
+.home-menu-about-blog-contact-ul{
+    list-style: none;
+    padding: 0em;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+ a{
+      text-decoration: none;
+  }
+
+ .link{text-decoration: none;
+        color:$grey;
+        transition: .8s ease-in-out;
+        padding:.5em 1em;
+        border-radius: 5px;
+
+        &.link:hover{
+            background-color: $red;
+            color: white;
+        }
+   }
+
+
+
+
+
+.home{background-color: $red;
+     color: white;}
+
+
+
+
+
+
+
+
+.drop-down-pages-menu-links{
+    width:120px;
+    background-color: white;
+    height: 19vh;
+    border-radius: 2px;
+    border: 1px solid white;
+    box-shadow: 1px 2px 3px 2px rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    position: absolute;
+    top: 67%;
+    display: none;
+    border-left: 5px solid $red;
+    z-index: 1;
+
+}
+
+
+
+.galleries{
+    list-style: none;
+    padding: 0em;
+}
+
+.galleries li{
+    padding: .7em;
+    transition: .8s ease-in-out;
+
+}
+.arrow-down{
+    position: relative;
+}
+
+
+
+.galleries a{
+    color: $grey;
+}
+
+.galleries li:hover{
+    background-color: $red;
+
+}
+.fa-bars{
+    font-size: 1.4rem;
+    border:3px solid $darkblue;
+    padding: .2em;
+    border-radius: 4px;
+    color: $red;
+    cursor: pointer;
+    display: none;
+    z-index: 100000;
+    position: relative;
+}
+
+.menu-bar{
+    width: 100%;
+    height: 55vh;
+    background-color:$lighgrey;
+    border-bottom: 1px solid $red;
+    position: absolute;
+    top: 98%;
+    
+}
+
+.menu-bar-links{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.menu-bar-links li{
+    width: 100%;
+    margin-left: 6em;
+    list-style: none;
+    padding: 0.2em 0em;
+    border-radius: 4px;
+}
+
+.menu-bar-link {
+    text-decoration: none;
+    color: $grey;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+
+.menu-bar-link-hovering{
+    transition: 1s ease-in;
+}
+
+
+
+.menu-bar-link-hovering:hover{
+   
+    background-color: $red;
+    a{
+        color: white;
+    }
+
+   
+}
+
+
+main{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+
+}
+
+
+.slides{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: hidden;
+
+
+    .fd{
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+    }
+    
+  
+}
+
+ 
+.fa-chevron-left{
+    cursor: pointer;
+    color: white;
+    background-color: $red;
+    padding: .3em .2em;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    font-size: 3rem;
+    border-radius: 5px;
+    transition: 1s all;
+}
+
+.fa-chevron-right{
+    cursor: pointer;
+    color: white;
+    background-color: $red;
+    padding: .3em .2em;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    z-index: 1;
+    font-size: 3rem;
+    border-radius: 5px;
+    transition: 1s all;
+}
+
+.fa-chevron-right:hover{
+background-color:black ;
+color: $golden;
+}
+.fa-chevron-left:hover{
+background-color:black ;
+color: $golden;
+}
+
+.welcome{
+position: absolute;
+top:15%;
+background-color: rgba(0, 0, 0, .3);
+width: 100%;
+height: 90vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.welcome h1{
+color: white;
+font-size: 4rem;
+letter-spacing: 2px;
+font-weight: 600;
+text-shadow: 3px 2px 6px rgba(154, 150, 150, 0.72);}
+
+.welcometo{
+text-align: center;
+}
+
+.welcome h2{
+color: white;
+font-size: 1.5rem;
+text-align: center;
+margin:1em auto;
+font-weight: 500;
+}
+
+.line-and-experienceDelcious{
+width:600px;
+display: flex;
+align-items: baseline;
+justify-content: space-around;}
+
+.first-line{
+width: 120px;
+height: 5px;
+background-color: $darkblue;
+position: relative;
+border-radius: 4px;
+}
+
+.first-line::after{
+content: '';
+position: absolute;
+top:8px;
+width: 120px;
+height: 5px;
+background-color: $darkblue;
+border-radius: 4px;
+
+}
+
+.first-line::before{
+content: '';
+position: absolute;
+bottom:8px;
+width: 120px;
+height: 5px;
+background-color: $darkblue;
+border-radius: 4px;
+
+}
+
+.second-line{
+width: 120px;
+height: 5px;
+background-color: $darkblue;
+position: relative;
+border-radius: 4px;
+
+
+}
+
+.second-line::after{
+content: '';
+position: absolute;
+top:8px;
+width: 120px;
+height: 5px;
+background-color: $darkblue;
+border-radius: 4px;
+
+}
+
+.second-line::before{
+content: '';
+position: absolute;
+bottom:8px;
+width: 120px;
+height: 5px;
+background-color: $darkblue;
+border-radius: 4px;
+
+}
+
+
+.reservation-btn{
+background-color: $golden;
+padding: 1em 2em;
+color: $red;
+border-radius: 4px;
+letter-spacing: 1px;
+font-weight: 700;
+cursor: pointer;
+border: none;
+box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, .5);
+transition: .5s ease-in;
+}
+
+.reservation-btn:hover{
+    color: white;
+}
+
+
+.menu-dinner-lunch-breakfast{
+    height: 180vh;
+}
+@-webkit-keyframes fadein {
+from { visibility: 0; }
+  to { opacity: 1;  
+}
+}
+@keyframes fadein {
+from { opacity: 0; }
+  to { opacity: 1;   
+}
+}
+
+
+
+.slide{ 
+animation: fadein 1s ease;
+}
+
+
+/********menu page********/
+
+.menu-dinner-lunch-breakfast{
+    width: 100%;
+}
+
+.menu-second-title{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    @include centering-column()
+  
+}
+
+
+
+.menu-title-1{
+    font-family: 'Antonio', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: $darkblue;
+    text-transform: uppercase;
+    padding-left: 20px;
+    border-left: 10px solid $red;
+    border-radius: 4px;
+
+}
+
+.menu-second-title-1{
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    color: $grey;
+    padding-top: 1em;
+}
+
+.dinner-lunch-breakfast{
+    width: 100%;
+    height: 10vh;
+    @include centering-row();
+    margin-bottom: 2em;
+    
+}
+
+.meal{
+    border: none;
+    padding: 1em 2em;
+    background-color: $lightorange;
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: .5em;
+    cursor: pointer;
+    outline: none;
+    transition: .3s ease-in;
+}
+
+
+.meal:hover{
+    color: $red;
+    border-top: 4px solid $darkblue;
+    box-shadow: rgba(0, 0, 0, 0.6);
+
+}
+
+.meal:active{
+    color: $red;
+    border-top: 4px solid $darkblue;
+
+}
+
+
+.images-of-the-menu{
+    display: grid;
+    grid-template-columns:4em 1fr 4em;
+    grid-template-rows: repeat(3,300px);
+    background-color: $lighgrey;
+}
+
+.movingUp-the-images{
+    transform: translateY(0);
+    animation: moving-up 3000ms ;
+}
+
+@keyframes moving-up {
+
+    0%{
+        transform: translateY(-4%);
+    }
+
+    100%{
+        transform: translateY(0%);
+
+    }
+    
+}
+
+
+
+
+
+.after-adding-animation{
+    display: grid;
+    grid-template-columns:4em 1fr 4em;
+    grid-template-rows: repeat(1,300px);
+}
+
+.pic{width: 100%;
+     height: 250px;
+     padding: .2em;
+     object-fit: cover;
+     border-radius: 4px;
+     box-shadow: .5px .5px 10px .5px rgba(0,0,0,0.4);
+     transform: scale(1);
+     transition: 500ms ease-out;
+    
+    }
+.pic-box{
+    overflow: hidden;
+}
+
+.pic-box:hover .pic{
+    transform: scale(1.2);
+}
+
+
+.breakfast-menu{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+}
+.adding-animation-breakfast{
+    animation: hiding-images 600ms ease-out;
+    transform: scale(0);
+    
+}
+@keyframes hiding-images{
+    0%{
+        transform:scale(1);
+        
+    }
+
+    100%{
+        transform: scale(0);
+    }
+}
+
+.adding-animation-breakfast-1{
+    animation: showing-images 900ms ease-out;  
+}
+@keyframes showing-images{
+    0%{
+        transform:scale(0);
+        
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.dinner-menu{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    margin-top: 1em;
+}
+
+
+.adding-animation-dinner-1{
+    animation: changing-position-2 1200ms ease-in;
+    transform:translateY(-100%);
+    
+}
+@keyframes changing-position-2{
+    0%{
+        transform:translateY(0%);
+    }
+
+    100%{
+        transform: translateY(-100%);
+
+    }
+}
+
+.adding-animation-dinner-1{
+    animation: changing-position-1 1200ms ease-in;
+    transform:translateY(-100%);
+    
+}
+@keyframes changing-position-1{
+    0%{
+        transform:translateY(0%);
+        
+    }
+
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.dessert-menu{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1em;
+    margin-top: 1em;
+}
+.adding-animation-dessert{
+    animation: changing-position 1200ms ease-in;
+    transform:translateY(-200%);
+    
+}
+@keyframes changing-position{
+    0%{
+        transform:translateY(0%);
+        
+    }
+
+    100%{
+        transform: translateY(-200%);
+    }
+}
+
+.name-price{
+    display: flex;
+    justify-content: space-between;
+
+
+    h3{
+    color: $grey;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    }
+
+    p{
+        color:$green;
+        font-weight: 500;
+        font-size: 1.2rem;
+
+    }
+}
+
+
+/*********restuarant introdiction***********/
+
+.restaurant-introduction{
+    width: 100%;
+    height: 80vh;
+    margin-top: 5em;
+}
+
+
+
+.restaurant-introduction-image-title{
+    width:100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 3.5em 1fr 12.5em 1fr 3.5em;
+}
+
+
+
+
+.introduction{
+    grid-column: 2/3;
+    width: 100%;
+    height: 60vh;
+    border-radius: 6px;
+    box-shadow: 1px 2px 9px 2px rgba(0, 0, 0, 0.3);
+
+ 
+    .meet-our-chef{
+        font-size: 3rem;
+        font-weight: 600;
+        color: $darkblue;
+        padding-left: 1em;
+
+
+        span{
+            color:$red;
+            font-size: 3.3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+        }
+
+
+
+    }
+
+    .meet-our-chef::after{
+        content: '';
+        background-color: $red;
+        width: 70px;
+        height: 6px;
+        display: block;
+        border-bottom: 5px solid $red;
+        border-radius: 6px;
+       
+    }
+     
+
+}
+
+.restaurant-introduction article{
+    padding: .5em 2em;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 1rem;
+    color:$darkgrey;
+}
+
+
+
+
+.chef-image{
+    grid-column: 4/5;
+
+
+
+
+    img{
+        width: 70%;
+        object-fit: cover;
+        height: 60vh;
+        left: 0px;
+        border-radius: 4px;
+        background-color: $darkblue;
+        padding: 0em 1em 1em 0em;
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+
+  
+}
+
+.adding-animation-to-introduction{
+    animation: moving-right 2000ms;
+    transform: translateX(0%);}
+
+@keyframes moving-right{
+    0%{
+        transform: translateX(-10%);
+
+    }
+
+    100%{
+
+        transform: translateX(0%);
+
+    }
+}
+
+.adding-animation-to-chef-image{
+    animation: moving-left 2000ms;
+    transform: translateX(0%);}
+
+@keyframes moving-left{
+    0%{
+        transform: translateX(10%);
+
+    }
+
+    100%{
+
+        transform: translateX(0%);
+
+    }
+}
+
+
+
+
+
+
+
+/********testimonial section**********/
+.testimonial{
+    padding-top: 1em;
+    height: 100vh;
+    width: 100%;
+    background-color:$lightyellow ;
+    @include centering-column();
+    position: relative;
+    
+.testimonial-left-arrow{
+         cursor: pointer;
+         position: absolute;
+         top: 44%;
+         left: 22%;
+         font-size: 3rem;
+         color:white;
+         background-color: $darkblue;
+         padding: .1em .4em;
+         border-radius: 5px;
+         transition: 500ms ease-in;
+
+         &:hover{
+             color: $golden;
+
+         }
+     }
+     .testimonial-right-arrow{
+        cursor: pointer;
+       position: absolute;
+       top: 44%;
+       right: 22%;
+       font-size: 3rem;
+       color:white;
+       background-color: $darkblue;
+       padding: .1em .4em;
+       border-radius: 5px;
+       transition: 500ms ease-in;
+
+       &:hover{
+        color: $golden;
+    }
+   }
+
+   
+    
+}
+
+
+.testimonial-title{
+    text-align: center;
+}
+
+.customers-reviews-title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color:$darkgrey
+}
+
+.customers-reviews-p{
+    font-weight: 500;
+    padding-bottom: 1em;
+    color: $darkgrey;
+    opacity: 0.9;
+}
+
+
+
+.testimonial img{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    border: .3px solid $darkblue;
+    padding: .2em;
+    background-color:$lighgrey;
+}
+
+.testimonial h2 {
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: $darkblue;
+    font-weight:600 ;
+    padding-top: .4em;
+    padding-bottom: .3em;
+    opacity: .9;
+
+}
+
+.review-text{
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #242422;
+    text-shadow: 0px 0px 1px rgba(150, 150, 150, 1);}
+
+
+.testimonial-slides{
+    width: 50%;
+    height: 60%;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+.reviews {
+    width: 100%;
+    height: 100%;
+  
+
+}
+
+/*************footer*****************/
+footer{
+    width: 100%;
+    height: 80vh;
+    margin-top: 3em;
+}
+
+.first-section-footer{
+    width: 100%;
+    background-color:$darkblue;
+    height: 20vh;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .phone-footer, .email-footer, .location-footer{
+        width: 20%;
+        border: 2px solid $grey;
+        border-radius: 3px;
+        display: flex;
+
+        .footer-icon{
+            background-color: $red;
+            border-radius: 4px;
+            font-size: 2rem;
+            padding: .3em;
+        }
+
+        .phone-number ,.email ,.location{
+            margin-left: 1em;
+
+            h2{
+                font-weight: 600;
+                letter-spacing: 1px;
+                padding-bottom: .2em;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    
+}
+
+.second-section-footer{
+    width: 100%;
+    height: 60vh;
+    background: url('./pics/ft-bg.jpg');
+    background-size: cover;
+    background-position: 40%;
+    border: 1px solid #000000;
+   .sub-section-footer{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 2em;
+
+     
+.about-us{
+        width: 30%;
+        color: white;
+        h1{font-size:1.5rem;
+            width: 30%;
+            font-weight: 600;
+            padding-bottom: .2em;
+            border-bottom: 4px solid $red;}
+
+        p{
+            line-height: 1.5em;
+        }
+    }
+
+
+.opening-hours{
+    h1{font-size:1.5rem;
+        width: 100%;
+        font-weight: 600;
+        padding-bottom: .2em;
+        color: white;
+        border-bottom: 4px solid $red;}
+}
+
+p{
+    color: white;
+    line-height: 3.5em;
+}
+
+.subscribe-social-links{
+        
+ .emailInput-subscribe-button{display: flex;
+                              flex-direction: column;
+input{
+    width: 100%;
+    height: 5vh;
+    outline: none;
+    border: 2px solid $darkblue;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    padding: .5em;
+}
+
+button{width: 100%;
+       padding:.5em 0;
+       color: white;
+       background-color: $darkblue;
+       cursor: pointer;
+       border: none;
+       letter-spacing: 2px;
+       font-weight: 600;
+       border-radius: 3px;
+       transition: 200ms ease-in;
+
+       &:hover{
+        color: $red;}
+
+    }
+
+    
+}
+.social-links{
+    color: white;
+    margin-top: 3em;
+    .social-icon{
+        font-size: 2rem;
+        padding-left: 1em;
+        transition: 500ms ease-out;
+        cursor: pointer;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+         }
+
+
+       }
+
+
+     }
+   }
+
+}
+
+.third-section-footer{
+    width: 100%;
+    background-color: $darkblue;
+    color: white;
+    text-align: center;
+    height: 10vh;
+
+    p{
+        padding-top: 1em;
+        font-weight: 600;
+    }
+}
+
+
+
+/************media queries************/
+
+@media (min-width:770px){
+    .fa-bars{
+        display: none;
+    }
+
+    .menu-bar{
+        display: none;
+    }
+}
+
+@media(max-width:1250px){
+.restaurant-introduction-image-title{
+        grid-template-columns:0.2em 1fr 3.5em 1fr 0.2em; ;
+    }
+
+.introduction{
+        height: 63vh;
+    }
+
+.chef-image{
+        img{height: 63vh;}
+    }
+
+.first-section-footer{
+    .phone-footer, .email-footer, .location-footer{
+        width: 26%;
+    }}
+
+.second-section-footer{
+ .sub-section-footer{
+        .about-us{width: 40%;}
+
+.opening-hours{margin-left: 2em;}
+
+.subscribe-social-links{
+    .emailInput-subscribe-button{
+          
+           input{width: 80%;
+            margin-left: 2em;}
+           
+           button{width: 80%;
+            margin-left: 2em;}}
+           
+
+.social-links{
+           
+        .social-icon{ font-size: 1.8rem;}
+       }       
+     }
+    }
+  }
+}
+
+@media (max-width:930px){
+
+.home-menu-about-blog-contact-ul{width: 60%;}
+
+.restaurant-introduction-image-title{grid-template-columns:5em 1fr 5em;}
+
+.introduction{
+        grid-column: 2/3;
+        height:100%;}
+
+.chef-image{
+        grid-column: 2/3;
+        width: 144%;
+        margin-top: 4.5em;}
+
+.testimonial{margin-top: 26em;}
+
+.first-section-footer{
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+
+        .phone-footer, .email-footer, .location-footer{
+            width: 50%;}    
+}
+
+.second-section-footer{
+        height: 142vh;
+        .sub-section-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2em 0em;
+
+        .about-us{width:85%; } 
+    }
+  }
+}
+
+
+@media (max-width:770px){
+
+ul .link{display: none;}
+
+.fa-bars{display: block;
+        margin-right: 2em;}
+
+.menu-bar{  display: none;}
+
+    
+.welcome h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+.welcome h2{
+        font-size: 1rem;
+    }
+
+.line-and-experienceDelcious{
+        width: 400px;
+    }
+
+.first-line{width: 60px;}
+
+.first-line::after{width: 60px;}
+
+.first-line::before{width: 60px;}
+
+.second-line{width: 60px;}
+
+.second-line::after{width: 60px;}
+
+.second-line::before{width: 60px;}
+
+    
+.fa-chevron-right,.fa-chevron-left{font-size: 1.8rem;}
+
+.breakfast-menu{
+         grid-template-columns: 1fr;
+     }
+
+.dinner-menu{
+        grid-template-columns: 1fr;
+    }
+.dessert-menu{
+        grid-template-columns: 1fr;
+    }
+
+.images-of-the-menu{
+        grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+    }
+    
+.restaurant-introduction{
+        margin-top: 136em;
+    }
+.dessert-menu{
+        margin-top: 7em;
+    }
+.dinner-menu{
+        margin-top: 3em;
+    }
+
+.testimonial-slides{
+        height: 74%;
+
+        p{padding: 0 .2em;}
+    }
+}
+
+@media(max-width:600px)
+
+{
+.restaurant-introduction-image-title{grid-template-columns:3em 1fr 3em;}
+
+.restaurant-introduction article{font-size: .9rem;}
+
+.introduction{
+        .meet-our-chef{font-size: 2.2rem;}
+         span{font-size: 2.3rem}}
+
+.testimonial{
+        
+        .testimonial-left-arrow{font-size: 2.4rem; }
+
+        .testimonial-right-arrow{font-size: 2.4rem; } 
+   }
+}
+
+
+
+@media (max-width:500px){
+    .testimonial-slides{
+        height: 65%;
+        width: 70%;
+    }
+
+    .testimonial{
+        margin-top: 35em;
+        
+        .testimonial-left-arrow{
+            font-size: 2.4rem;
+            left: 11%;
+          }
+        .testimonial-right-arrow{
+            font-size: 2.4rem;
+            right: 11%;
+        
+         } 
+   }
+    .logo{
+        margin-left: 0em;
+    }
+
+    .fa-bars{
+        margin-right:.5em;
+    }
+
+
+    .menu-bar-links li{
+        margin-left: 2em;
+    }
+
+    .line-and-experienceDelcious{
+        width: 300px;
+    }
+
+    .first-line{width: 30px;}
+    .first-line::after{width: 30px;}
+    .first-line::before{width: 30px;}
+
+    .second-line{width: 30px;}
+    .second-line::after{width: 30px;}
+    .second-line::before{width: 30px;}
+
+    .reservation-btn{
+        padding:0.7em 1em  ;
+    }
+
+    .menu-title-1{
+        font-size: 3rem;}
+
+    .meal{
+        padding: .8em 1.6em;
+        font-size: .9rem;}
+
+.first-section-footer{
+         .phone-footer, .email-footer, .location-footer{width: 70%;}}
+
+.second-section-footer{
+        height: 150vh;
+.sub-section-footer{
+     .about-us{padding-bottom: 2em;}
+          
+    .subscribe-social-links{
+           .social-links{
+               .social-icon{
+                   padding-left: .8em;
+                   padding-bottom: 2em; }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:380px){
+.testimonial{margin-top: 45em;}
+
+.menu-second-title-1{
+    text-align: center;
+}
+
+
+.first-section-footer{
+        .phone-footer, .email-footer, .location-footer{
+            width: 95%;}}
+
+    
+.second-section-footer{
+        height: 170vh;
+
+ .sub-section-footer{
+      
+  .about-us{
+         padding: 2.5em 0em;}
+          
+  .subscribe-social-links{
+           .social-links{
+               .social-icon{
+                   font-size: 1.5rem;
+                   padding-bottom: 3em;
+               
+              }
+            }
+         }
+      }
+   }
+}
+
+
